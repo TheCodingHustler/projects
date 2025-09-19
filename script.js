@@ -2,10 +2,10 @@
 const togglebutton = document.getElementById("btnToggle");
 if (togglebutton) {
     togglebutton.addEventListener("click", () => {
-        if (window.location.pathname.endsWith("light.html")) {
+        if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("netlify.app")) {
             window.location.href = "dark.html";
         } else {
-            window.location.href = "light.html";
+            window.location.href = "index.html";
         }
     });
 }
