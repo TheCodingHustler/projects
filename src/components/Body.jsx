@@ -1,25 +1,34 @@
-function Body() {
-  return (
-    <section id="home">
-      <div className="bodyContainer">
-        <div className="bodyText">
-          <h1>
-            CycleVault <br />
-            Bike Hub Company
-          </h1>
-          <p className="slogan">
-            Your Bike’s Safe Haven. 
-            CycleVault provides 24/7 secure storage for urban cyclists,
-            ensuring your bike is protected and always within reach whenever you need it.
-          </p>
-        </div>
+import { useState } from "react";
 
-        <div className="bodyImageContainer">
-          <img
-            src="/assets/bodyImg.jpeg"
-            alt="Cyclist"
-            className="bodyImg"
+function Body({ onSearch }) {
+  const [playerName, setPlayerName] = useState("");
+
+  function handleClick() {
+    if (!playerName.trim()) {
+      console.log("No name entered");
+      return;
+    }
+    onSearch(playerName);
+  }
+
+  return (
+    <section id="Body">
+      <div className="input-section">
+        <h1>learn more about your favorite player</h1>
+        <br />
+
+        <div className="inputs">
+          <input
+            type="text"
+            placeholder="enter player name"
+            value={playerName}
+            onChange={(e) => setPlayerName(e.target.value)}
+            id="player-name"
           />
+
+          <button className="log-in-button" onClick={handleClick}>
+            submit
+          </button>
         </div>
       </div>
     </section>
