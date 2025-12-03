@@ -1,14 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-<<<<<<< HEAD
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
-=======
-// vite.config.js
-
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -21,4 +14,3 @@ export default defineConfig({
     }
   }
 })
->>>>>>> 5862b61 (nba project)
